@@ -1,0 +1,268 @@
+/* Estilos generales */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    color: #fff; /* Cambiar color del texto a blanco para mejor visibilidad */
+    background: url('img/large_Safe_Black.jpg') no-repeat center center/cover;
+    height: 100vh; /* Asegura que la imagen de fondo cubra toda la ventana */
+}
+
+/* Barra de navegación */
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem 2rem;
+    background-color: rgb(18, 100, 125);
+    box-shadow: 0 2px 5px rgba(27, 123, 219, 0.1);
+}
+
+.navbar .logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: white;
+    margin-right: 20px; /* Añade espacio entre el logo y el buscador */
+}
+
+.navbar .search-form {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex: 1; /* Ocupa el espacio central */
+}
+
+.navbar .search-form input {
+    padding: 5px;
+    border-radius: 4px;
+    border: none;
+    font-size: 14px;
+    width: 200px;
+}
+
+.navbar .search-form button {
+    padding: 6px 12px;
+    margin-left: 5px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.navbar .search-form button:hover {
+    background-color: #45a049;
+}
+
+.navbar .navigation {
+    display: flex;
+    gap: 1rem;
+}
+
+.navbar .navigation a {
+    color: white;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.navbar .navigation a:hover {
+    text-decoration: underline;
+}
+
+/* Sección principal (hero) */
+.hero-section {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding: 2rem;
+    background-color: rgba(0, 0, 0, 0.5); /* Fondo oscuro y translúcido */
+}
+
+.hero-content {
+    max-width: 50%;
+    text-align: left;
+}
+
+.hero-content h1 {
+    font-size: 2.5rem;
+    color: white;
+    margin-bottom: 1rem;
+}
+
+.hero-content p {
+    font-size: 1.2rem;
+    color: white;
+    margin-bottom: 1.5rem;
+}
+
+.buttons {
+    display: flex;
+    gap: 1rem;
+}
+
+.btn {
+    padding: 0.75rem 1.5rem;
+    font-size: 1rem;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.btn-primary {
+    background-color: #ff007f;
+    color: white;
+}
+
+.btn-primary:hover {
+    background-color: #e60072;
+}
+
+.btn-secondary {
+    background-color: white;
+    color: #ff007f;
+    border: 2px solid #ff007f;
+}
+
+.btn-secondary:hover {
+    background-color: #ffe6f0;
+}
+
+.hero-image img {
+    max-width: 500px;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Sección de productos */
+.products {
+    padding: 2rem 1rem;
+    text-align: center;
+}
+
+.products h2 {
+    font-size: 1.8rem;
+    color: white;
+    margin-bottom: 2rem;
+}
+
+.product-grid {
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+    flex-wrap: wrap;
+}
+
+.product-item {
+    width: 200px;
+    text-align: center;
+}
+
+.product-item img {
+    width: 100%;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.product-item p {
+    margin-top: 0.5rem;
+    font-weight: bold;
+    color: white; /* Color del texto en blanco */
+}
+
+/* Responsividad */
+@media (max-width: 1024px) {
+    .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 1rem;
+    }
+
+    .navbar .logo {
+        font-size: 1.2rem;
+    }
+
+    .navbar .search-form input {
+        width: 150px;
+    }
+
+    .hero-section {
+        flex-direction: column;
+        padding: 1rem;
+        text-align: center;
+    }
+
+    .hero-content {
+        max-width: 100%;
+    }
+
+    .buttons {
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .product-grid {
+        flex-direction: column;
+        gap: 2rem;
+    }
+
+    .product-item {
+        width: 100%;
+    }
+}
+
+@media (max-width: 768px) {
+    .navbar .search-form input {
+        width: 120px;
+    }
+
+    .hero-content h1 {
+        font-size: 2rem;
+    }
+
+    .hero-content p {
+        font-size: 1rem;
+    }
+
+    .btn {
+        padding: 0.5rem 1rem;
+        font-size: 0.9rem;
+    }
+
+    .product-item {
+        width: 150px;
+    }
+
+    .product-grid {
+        gap: 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .navbar {
+        padding: 1rem;
+    }
+
+    .navbar .search-form input {
+        width: 100px;
+    }
+
+    .hero-content h1 {
+        font-size: 1.5rem;
+    }
+
+    .hero-content p {
+        font-size: 0.9rem;
+    }
+
+    .buttons {
+        flex-direction: column;
+        gap: 0.8rem;
+    }
+
+    .product-item {
+        width: 120px;
+    }
+}

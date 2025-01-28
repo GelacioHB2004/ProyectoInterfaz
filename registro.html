@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario de Registro</title>
+    <link rel="stylesheet" href="resgistro.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="navbar-logo">Cajas Fuertes</div>
+        <div class="navbar-search">
+            <input type="text" placeholder="Buscar productos...">
+            <button>Buscar</button>
+        </div>
+        <div class="navbar-links">
+            <a href="Principal.html">Inicio</a>
+            <a href="login.html">Iniciar Sesión</a>
+            <a href="registro.html">Crear Cuenta</a>
+        </div>
+    </nav>
+
+    <div class="register-container">
+        <h2>Registrarse</h2>
+        <form action="registro.html" method="POST">
+            <div class="input-group">
+                <label for="fullname">Nombre Completo</label>
+                <input type="text" id="fullname" name="fullname" required>
+            </div>
+            <div class="input-group">
+                <label for="username">Nombre de Usuario</label>
+                <input type="text" id="username" name="username" required>
+            </div>
+            <div class="input-group">
+                <label for="email">Correo Electrónico</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+            <div class="input-group">
+                <label for="password">Contraseña</label>
+                <input type="password" id="password" name="password" required>
+            </div>
+            <div class="input-group">
+                <label for="confirm-password">Confirmar Contraseña</label>
+                <input type="password" id="confirm-password" name="confirm-password" required>
+            </div>
+            <button type="submit" class="btn-register">Registrarse</button>
+        </form>
+    </div>
+</body>
+</html>
+
